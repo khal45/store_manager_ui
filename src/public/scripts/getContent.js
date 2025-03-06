@@ -14,7 +14,7 @@ const getContent = (apiUrl) => {
   const accessToken = getCookieValue("accessToken");
 
   if (!accessToken) {
-    window.open("index.html", "_self");
+    window.open("../index.html", "_self");
     return;
   }
   const verifyToken = async () => {
@@ -23,7 +23,7 @@ const getContent = (apiUrl) => {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       if (!response.ok) {
-        window.open("index.html", "_self");
+        window.open("../index.html", "_self");
         return;
       } else {
         const payload = JSON.parse(atob(accessToken.split(".")[1]));
