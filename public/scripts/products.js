@@ -1,5 +1,5 @@
 import { getContent, getCookieValue } from "./getContent.js";
-const apiUrl = "http://localhost:4000/api/v1/products";
+const apiUrl = "https://store-manager-server.onrender.com/api/v1/products";
 getContent(apiUrl);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       const response = await fetch(
-        "http://localhost:4000/api/v1/sales",
+        "https://store-manager-server.onrender.com/api/v1/sales",
         options
       );
       const data = await response.json();

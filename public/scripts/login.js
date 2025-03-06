@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ username, password }),
       };
 
-      const response = await fetch("http://localhost:4000/api/v1", options);
+      const response = await fetch(
+        "https://store-manager-server.onrender.com/api/v1",
+        options
+      );
       const data = await response.json();
 
       if (!response.ok) {
